@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel Responsivo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        .carousel-container {
+            width: 90%;
+            max-width: 600px;
+            overflow: hidden;
+            position: relative;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel {
+            display: flex;
+            width: 300%; /* Ajustado dinámicamente en JS */
+            transition: transform 1s ease-in-out;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .descripcion {
+            max-width: 600px;
+            margin: 20px auto;
+            font-size: 18px;
+            color: #333;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .carousel-container {
+                width: 100%;
+            }
+
+            .descripcion {
+                width: 90%;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mi Carrusel de Imágenes</h1>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="images/cuidadosDomiciliarios/WhatsApp Image 2025-02-10 at 20.15.44 (3).jpeg" alt="Imagen 1">
+            <img src="images/2.jpeg" alt="Imagen 2">
+            <img src="images/3.jpeg" alt="Imagen 3">
+        </div>
+    </div>
+
+    <div class="descripcion">
+        <p>Esta es una descripción debajo del carrusel. Aquí puedes escribir información adicional sobre las imágenes.</p>
+    </div>
+
+    <script>
+        let index = 0;
+        const carousel = document.querySelector('.carousel');
+        const images = document.querySelectorAll('.carousel img');
+
+        function ajustarAnchoCarrusel() {
+            const anchoCarrusel = document.querySelector('.carousel-container').offsetWidth;
+            images.forEach(img => img.style.width = `${anchoCarrusel}px`);
+            carousel.style.width = `${anchoCarrusel * images.length}px`;
+        }
+
+        function cambiarImagen() {
+            index = (index + 1) % images.length;
+            const anchoCarrusel = document.querySelector('.carousel-container').offsetWidth;
+            carousel.style.transform = `translateX(-${index * anchoCarrusel}px)`;
+        }
+
+        window.addEventListener('resize', ajustarAnchoCarrusel);
+        ajustarAnchoCarrusel(); // Ajustar al cargar la página
+        setInterval(cambiarImagen, 4000);
+    </script>
+
+</body>
+</html>
