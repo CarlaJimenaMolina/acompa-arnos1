@@ -1,110 +1,146 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrusel Responsivo</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+<!DOCTYPE HTML>
 
-        body {
-            text-align: center;
-            background-color: #f8f8f8;
-        }
+<html>
+	<head>
+		<title>Cuidados Domiciliarios</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
 
-        h1 {
-            margin: 20px 0;
-        }
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-        .carousel-container {
-            width: 90%;
-            max-width: 600px;
-            overflow: hidden;
-            position: relative;
-            margin: 20px auto;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
 
-        .carousel {
-            display: flex;
-            width: 300%; /* Ajustado dinámicamente en JS */
-            transition: transform 1s ease-in-out;
-        }
+							<!-- Header -->
+								<header id="header">
+									<a href="cuidadosDomiciliarios.html" class="logo" id="servicio" style="font-size: 1.7em;"><strong>Acompañamiento Domiciliario</strong>  Acompañarnos</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+                                <br><br>
+                                <P id="descripcion"><strong>Brindamos atención cálida y profesional en la comodidad de tu hogar. Nuestro equipo se dedica a mejorar la calidad de vida de cada persona, ofreciendo acompañamiento, asistencia en actividades diarias y apoyo emocional con un trato humano y cercano.</strong></P>
+								<li><a href="#" class="button">CONTACTANOS</a></li>
+							<!-- Banner -->
+								<section id="banner">
+									
+									<!--<span class="image object">
+										<img src="images/1.jpeg" alt="" />
+									</span>-->
+									<div class="carousel-container image object">
+										<div class="carousel">
+											<img src="images/pic01.jpg" class="active" alt="Imagen 1">
+											<img src="images/pic02.jpg" alt="Imagen 2">
+											<img src="images/pic03.jpg" alt="Imagen 3">
+										</div>
+									</div>
+								</section>
 
-        .carousel img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            flex-shrink: 0;
-        }
+							<!-- Section -->
+								
 
-        .descripcion {
-            max-width: 600px;
-            margin: 20px auto;
-            font-size: 18px;
-            color: #333;
-            padding: 10px;
-            background: #fff;
-            border-radius: 5px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
+						</div>
+					</div>
 
-        /* Ajustes responsivos */
-        @media (max-width: 768px) {
-            .carousel-container {
-                width: 100%;
-            }
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
 
-            .descripcion {
-                width: 90%;
-                font-size: 16px;
-            }
-        }
-    </style>
-</head>
-<body>
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Buscar" />
+									</form>
+								</section>
 
-    <h1>Mi Carrusel de Imágenes</h1>
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Inicio</a></li>
+										<li>
+											<span class="opener">Nuestros Servicios</span>
+											<ul>
+												<li><a href="cuidadosDomiciliarios.html">Acompañamiento Domiciliario</a></li>
+												<li><a href="cuidadosHospitalarios.html">Acompañamiento Hospitalario</a></li>
+												<li><a href="acompanamientoninez.html">Acompañamiento de la Niñez</a></li>
+												<li><a href="estimulacion.html">Estimulación de la Niñez</a></li>
+												<li><a href="domestico.html">Servicio Doméstico</a></li>
+												<li><a href="alquiler.html">Alquiler de Insumos Ortopedicos</a></li>
+											</ul>
+										</li>
+										<li><a href="index.html">Acerca de Nosotros</a></li>
+										<li><a href="index.html">Novedades</a></li>
+										<li><a href="#">Contactanos</a></li>
+									</ul>
+								</nav>
 
-    <div class="carousel-container">
-        <div class="carousel">
-            <img src="images/cuidadosDomiciliarios/WhatsApp Image 2025-02-10 at 20.15.44 (3).jpeg" alt="Imagen 1">
-            <img src="images/2.jpeg" alt="Imagen 2">
-            <img src="images/3.jpeg" alt="Imagen 3">
-        </div>
-    </div>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Novedades</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="images/noticias1.jpg" alt="" /></a>
+											<p>Texto con descripción de la foto.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/noticias2.jpg" alt="" /></a>
+											<p>Texto con descripción de la foto.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/noticias3.jpg" alt="" /></a>
+											<p>Texto con descripción de la foto.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">Más</a></li>
+									</ul>
+								</section>
 
-    <div class="descripcion">
-        <p>Esta es una descripción debajo del carrusel. Aquí puedes escribir información adicional sobre las imágenes.</p>
-    </div>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Contactanos</h2>
+									</header>
+									<p> <b>Sede Mendoza:</b> Av. Perú 785, ciudad de mendoza.</p>
+									<p> <b>Sede Zapala:</b> Av. Perú 785, ciudad de mendoza.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">acompanarnos.arg@gmail.com</a></li>
+										<li class="icon solid fa-phone">261 ??????</li>
+										<li class="icon solid fa-home">Av. Perú 785,<br />
+											ciudad de mendoza</li>
+									</ul>
+								</section>
 
-    <script>
-        let index = 0;
-        const carousel = document.querySelector('.carousel');
-        const images = document.querySelectorAll('.carousel img');
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
 
-        function ajustarAnchoCarrusel() {
-            const anchoCarrusel = document.querySelector('.carousel-container').offsetWidth;
-            images.forEach(img => img.style.width = `${anchoCarrusel}px`);
-            carousel.style.width = `${anchoCarrusel * images.length}px`;
-        }
+						</div>
+					</div>
 
-        function cambiarImagen() {
-            index = (index + 1) % images.length;
-            const anchoCarrusel = document.querySelector('.carousel-container').offsetWidth;
-            carousel.style.transform = `translateX(-${index * anchoCarrusel}px)`;
-        }
+			</div>
 
-        window.addEventListener('resize', ajustarAnchoCarrusel);
-        ajustarAnchoCarrusel(); // Ajustar al cargar la página
-        setInterval(cambiarImagen, 4000);
-    </script>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-</body>
+	</body>
 </html>
