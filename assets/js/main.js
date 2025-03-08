@@ -274,3 +274,6 @@ function changeImage() {
 }
 
 setInterval(changeImage, 4000);
+
+
+
